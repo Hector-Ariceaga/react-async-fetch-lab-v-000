@@ -10,11 +10,11 @@ export default class App extends Component{
   componentDidMount(){
     fetch('http://api.open-notify.org/astros.json')
     .then(res => return res.json())
-    .then(data =>
+    .then(data => {
       this.setState({
         spacePeeps: data.people
       })
-    )
+    })
   }
 
   render(){
