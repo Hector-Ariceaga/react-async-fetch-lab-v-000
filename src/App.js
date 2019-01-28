@@ -14,7 +14,7 @@ export default class App extends Component{
       spacePeeps: data.people
     }))
   }
-  
+
   render(){
     return(<div>{this.state.spacePeeps.map(person=>person.name)}</div>)
   }
