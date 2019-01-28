@@ -4,8 +4,9 @@ import React, {Component} from 'react';
 export default class App extends Component{
 
   state = {
-    spacePeeps:[]
+    spacePeeps: []
   }
+  
   componentDidMount(){
     fetch('http://api.open-notify.org/astros.json')
     .then(data => return data.json())
@@ -14,7 +15,7 @@ export default class App extends Component{
       spacePeeps: data.people
     }))
   }
-
+  
   render(){
     return(<div>{this.state.spacePeeps.map(person=>person.name)}</div>)
   }
