@@ -6,7 +6,7 @@ export default class App extends Component{
   state = {
     spacePeeps: []
   }
-  
+
   componentDidMount(){
     fetch('http://api.open-notify.org/astros.json')
     .then(res => return res.json())
@@ -15,7 +15,7 @@ export default class App extends Component{
       spacePeeps: data.people
     }))
   }
-  
+
   render(){
     return(<div>
       {this.state.spacePeeps.map(person=>person.name)}
